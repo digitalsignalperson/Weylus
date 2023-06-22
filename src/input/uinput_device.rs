@@ -453,7 +453,7 @@ impl InputDevice for UInputDevice {
                             self.tool_pen_active = true;
                         }
                         if let Button::ERASER = event.button {
-                            self.send(self.stylus_fd, ET_KEY, EC_KEY_TOOL_PEN, 0);
+                            self.send(self.stylus_fd, ET_KEY, EC_KEY_TOOL_PEN, 1);
                             self.send(self.stylus_fd, ET_KEY, EC_KEY_TOOL_RUBBER, 1);
                             self.tool_pen_active = false;
                         }
